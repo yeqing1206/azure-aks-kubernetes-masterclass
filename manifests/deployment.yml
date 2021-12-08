@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yeqingazureakskubernetesmasterclass 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yeqingazureakskubernetesmasterclass
+  template:
+    metadata:
+      labels:
+        app: yeqingazureakskubernetesmasterclass 
+    spec:
+      containers:
+        - name: yeqingazureakskubernetesmasterclass 
+          image: yesunacr2.azurecr.io/yeqingazureakskubernetesmasterclass
+          ports:
+          - containerPort: 80
